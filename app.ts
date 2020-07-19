@@ -9,6 +9,7 @@ import { authenticateApi } from './api/authenticateApi';
 import { updateUserApi} from './api/updateUserApi';
 import { fetchApi } from './api/fetchApi';
 import { addUserApi } from './api/addUserApi';
+import { deleteUserApi } from './api/deleteUserApi';
 const app: express.Application = express();
 // const router: express.Router = express.Router();
 
@@ -58,6 +59,7 @@ app.post('/updateUser', updateUserApi.invoke);
 app.get('/courses', fetchApi.fetchCourses);
 app.get('/roles', fetchApi.fetchRoles);
 app.post('/addUser', addUserApi.insertUser);
+app.post('/deleteUser', deleteUserApi.deleteUser);
 const port = 5463
 app.listen(port, ()=> console.log(`Example app listening at http://localhost:${port}`))
 

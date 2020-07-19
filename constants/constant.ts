@@ -3,5 +3,6 @@ export const QUERIES = {
     UPDATE_USER: `update institute.User SET `,
     FETCH_COURSES: `select * from institute.courses`,
     FETCh_ROLES: 'select * from institute.roles',
-    INSERT_USER: `insert into institute.user set `
+    INSERT_USER: `insert into institute.user set `,
+    DELETE_USER: `delete from institute.user where user_id = `,
 }

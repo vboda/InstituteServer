@@ -28,8 +28,14 @@ insert into institute.user values(4, 'john', 'Data Structures', 'john@gmail.com'
 
 insert into institute.courses  set course='Data Structures';
 
+insert into institute.roles  set role='Student';
+
 Credentials:
             "host": "localhost",
             "user": "root",
             "password": "password",
             "database": "institute"
+
+
+  ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+flush privileges;
