@@ -1,0 +1,32 @@
+{
+	"name":"*",
+	"photo_url":"",
+	"mobile_number":"*",
+	"courses":[
+		"name":"",
+		"starting_date":""
+	]
+	"joining_date":"*",
+	"salary":"*",
+	"description":"referred by somebody like mateen"
+	
+}
+table : faculties PK name
+
+endpoint : GET PUT POST DELETE /faculties
+photoUrl : this will be the url of file system like "d:photos/umar.jpg
+"*": means mandatory
+keep the photos in assets folder of angular application so that it can served
+note courses is an array of course ids i.e., one faculty can teach many courses
+
+
+get the data from users (by role "faculty") and faculties_courses table 
+
+
+
+CREATE TABLE `faculties_courses` (
+  `faculty_name` varchar(300) NOT NULL,
+  `course_name` varchar(300) NOT NULL,
+  `starting_date` bigint DEFAULT NULL,
+  PRIMARY KEY (`faculty_name`,`course_name`)
+) 
