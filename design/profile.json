@@ -1,0 +1,37 @@
+{
+	"user_id":"*",
+	"password":"*",
+	"name":"*",
+	"photo_url":"",
+	"mobile_number":"*",
+	"description":"like a teacher with so many years of exp"
+}
+table : users ( PK : user_id )
+endpoint : GET /profile
+photoUrl : this will be the url of file system like "d:photos/umar.jpg
+"*": means mandatory
+keep the photos in assets folder of angular application so that it can served
+
+CREATE TABLE `users` (
+  `user_id` varchar(300) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `name` varchar(300) NOT NULL,
+  `photo_url` varchar(300) NOT NULL,
+  `mobile_number` varchar(10) DEFAULT NULL,
+  `user_role` varchar(10) NOT NULL,
+  `description` text DEFAULT NULL,
+  `salary` DECIMAL(4,2) DEFAULT NULL,
+  `joining_date` bigint DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) 
+
+user_role is fk to roles id
+
+
+CREATE TABLE `user_roles` (
+  `role` varchar(300) NOT NULL,
+  `description` text DEFAULT NULL
+  PRIMARY KEY (`role`)
+) 
+
+

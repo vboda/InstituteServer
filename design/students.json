@@ -1,0 +1,41 @@
+{
+	"name":"*",
+	"photo_url":"",
+	"mobile_number":"*",
+	"courses":[
+		"id":"this is course id"
+		"total_fee":"*",
+		"amount_paid":"*",
+		"joining_date":"*"
+	],
+	"description":"referred by somebody like mateen"
+	
+}
+table : students PK name
+
+endpoint : GET PUT POST DELETE /students
+photoUrl : this will be the url of file system like "d:photos/umar.jpg
+"*": means mandatory
+keep the photos in assets folder of angular application so that it can served
+note courses is an array of course ids i.e., one student can join many courses
+
+
+CREATE TABLE `students` (
+  `name` varchar(300) NOT NULL,
+  `photo_url` varchar(300) NOT NULL,
+  `mobile_number` varchar(10) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  PRIMARY KEY (`name`)
+) 
+
+CREATE TABLE `course_students` (
+  `student_name` varchar(300) NOT NULL,
+  `course_name` varchar(300) NOT NULL,
+  `total_fee` DECIMAL(4,2) NOT NULL,
+  `amount_paid` DECIMAL(4,2) NOT NULL,
+  `joining_date` bigint DEFAULT NULL,
+  PRIMARY KEY (`student_name`,`course_name`)
+) 
+
+joining date must be date in millis
+

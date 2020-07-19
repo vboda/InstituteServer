@@ -1,0 +1,25 @@
+{
+	"name":"*",
+	"photo_url":"",
+	"fee":"*",
+	"duration":"*",
+	"description":""
+	
+}
+table : courses PK name
+
+endpoint : GET PUT POST DELETE /courses
+photoUrl : (catalog) this will be the url of file system like "d:photos/umar.jpg
+description: some description
+"*": means mandatory
+keep the photos in assets folder of angular application so that it can served
+
+
+CREATE TABLE `courses` (
+  `name` varchar(300) NOT NULL,
+  `photo_url` varchar(300) DEFAULT NULL,
+  `fee` DECIMAL(4,2) NOT NULL,
+  `duration` varchar(300) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  PRIMARY KEY (`name`)
+) 
